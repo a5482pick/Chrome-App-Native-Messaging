@@ -1,6 +1,6 @@
 The native-messaging-example-host-file (Chrome App here https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/nativeMessaging/host/, and see https://developer.chrome.com/extensions/nativeMessaging) is modified in several alternative ways.  A different Python module is used each time.  The aim is only to demonstrate the main ideas of the messaging process.
 
-Code was tested on Python 2.7.6, for 'little endian'.  (For 'big endian', pad the returned message's length with the zeros to the left instead).  The required amount of this 'padding' will depend on the returned message's length.  Longer messages will need less padding of the returned 32-bit word length message.
+Code was tested on Python 2.7.6, for 'little endian'.  (Big endian machines will require zero(s) to be added in opposite order).  Note also that longer messages will need less padding with zeros for the returned 32-bit word length message.
 
 ----------------------
 
